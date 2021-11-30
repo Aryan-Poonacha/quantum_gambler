@@ -12,8 +12,6 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-        <script src="{{url_for('static', filename='js/script.js')}}"></script>
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
         <style>
@@ -43,11 +41,15 @@
                 <div class="col-4">
                     <img class="img-responsive center-block" src="{{url_for('static', filename='img/glitched.gif')}}">
                     <h1 style = "font-family:Trajan Pro Bold; color:white; size: 200%;">The Quantum Gambler</h1>
-                    <p>Rules:
+                    <p style= "font-family:Trajan Pro Bold; color:white; size: 200%;">Rules:
                         <br>
-                        
+                        Like deal or no deal. Your goal is to pick the card that is the required card. But the cards are all in unmeasured, uncertain superpositions and are quantum entangled to each other, so opening one can change the contents of the other cards!
+                        <br>
+                        Choose the order carefully! Different orders for the same set will produce different outcomes, and it's all based on random chance.
+                        <br>
+                        Press F11 to play in fullscreen (recommended).
                     </p>
-                    <button type="button" style="font-family:Trajan Pro Regular;" class="btn btn-dark">play</button>
+                    <a href="{{ url_for('game') }}"><btn  id= 'play' type="button" style="font-family:Trajan Pro Regular;" class="btn btn-dark">play</button></a>
                 </div>
                 <div class="col-4">
                 </div>
